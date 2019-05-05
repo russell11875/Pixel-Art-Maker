@@ -11,11 +11,11 @@ $('#sizePicker').submit(function (event) {
     makeGrid(height,width);
     //console.log('Height:' + height + ' and width: ' + width);
 })
-
+// A grid should appear when you enter an number into the width, height, and the user selects submit button.
 function makeGrid(x,y) {
     $('tr').remove();
 
-    // Your code goes here!
+    // this will create table
     for (var i = 1; i <= x; i++){
         $('#pixelCanvas').append('<tr id=table' + i + '></tr>');
         for (var j = 1; j <= x; j++) {
@@ -23,7 +23,7 @@ function makeGrid(x,y) {
         }
     } 
     
-    //add color to cell
+    //adds or removes color to or from the table
     $('td').click(function addColor() {
         color = $('#colorPicker').val();
 
