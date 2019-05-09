@@ -2,23 +2,23 @@
 // Select size input
 var height, width, color;
 
-
-// When size is submitted by the user, call makeGrid()
+// Submit by the user makeGrid()
 $('#sizePicker').submit(function (event) {
     event.preventDefault();
     height = $('#inputHeight').val();
-    width = $('#inputwidth').val();
-    makeGrid(height,width);
+    width = $('#inputWidth').val();
+    makeGrid(height, width);
     //console.log('Height:' + height + ' and width: ' + width);
 })
+
 // A grid should appear when you enter an number into the width, height, and the user selects submit button.
-function makeGrid(x,y) {
+function makeGrid(x, y) {
     $('tr').remove();
 
     // this will create table
     for (var i = 1; i <= x; i++){
         $('#pixelCanvas').append('<tr id=table' + i + '></tr>');
-        for (var j = 1; j <= x; j++) {
+        for (var j = 1; j <= y; j++) {
             $('#table' + i).append('<td></td>');
         }
     } 
